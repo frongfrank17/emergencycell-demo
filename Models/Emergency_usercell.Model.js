@@ -13,7 +13,7 @@ module.exports = {
                             "first_name":req.body.first_name , 
                             "last_name":req.body.last_name , 
                             "gender": req.body.gender ,
-                            "profile_image" : req.body.img         
+                            "profile_image" : req.body.profile_image       
                         },
                     "Contact" : 
                         {
