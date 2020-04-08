@@ -14,7 +14,7 @@ module.exports = {
                     "email":req.body.email , "fullname":req.body.fullname      
                     }
                     if(result == undefined || !result == null ){
-                        config.insert(register, (result ) => {
+                        config.insert(register, ( response , err ) => {
                             
                             res.json({"status":true,"message": " Register complete" , "username": result.username})
                         })
