@@ -2,12 +2,12 @@ const express = require('express');
 const router = express.Router();
 
 // model Stion service 
-//const MODEL_Station_Register = require()
+const MODEL_Station_Register = require('../Models/station_register')
 const MODEL_Station_Login = require('../Models/Station_login')
 //const MODEL_Station_Edit = require()
 //const MODEL_Station_remove = require()
 //rounter path 
-//router.post("/staff/register" , MODEL_Emergency_cell.usercell)
+router.post("/staff/register" , MODEL_Station_Register.register)
 // POST : api/station/manager/v1/staff/register  
 router.post("/staff/login" , MODEL_Station_Login.managerLogin)
 // POST : api/station/manager/v1/staff/login

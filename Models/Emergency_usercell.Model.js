@@ -3,7 +3,7 @@ const monk = require('monk')
 const db = monk('mongodb://heroku_jbn2nzgx:9bqdhhn84o2mn2t5bu6r720pd8@ds247569.mlab.com:47569/heroku_jbn2nzgx')
 //var db = monk("mongodb://localhost:27017/dbEmergency");
 module.exports = {
-  // POST : api/emergency/user/cell  
+  // POST : api/emergency/v1/user/cell  
     usercell : (req , res ) => {
         let user_cell = {
           "User_" :
