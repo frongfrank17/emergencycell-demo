@@ -14,8 +14,8 @@ module.exports = {
                     "email":req.body.email , "fullname":req.body.fullname      
                     }
                     if(result == undefined || !result == null ){
-                        config.insert(register, (result ,err ) => {
-                            if(err) throw err 
+                        config.insert(register, (result ) => {
+                            
                             res.json({"status":true,"message": " Register complete" , "username": result.username})
                         })
                     }else  { res.json({"status" : false , "message": "username duplicate "}) }
