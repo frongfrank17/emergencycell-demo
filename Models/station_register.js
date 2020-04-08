@@ -15,8 +15,7 @@ module.exports = {
                     }
                     if(result == undefined || !result == null ){
                         config.insert(register, ( response , err ) => {
-                            
-                            res.json({"status":true,"message": " Register complete" , "username": response.username})
+                            res.json({"status" : true , "message": "username duplicate "})
                         })
                     }else  { res.json({"status" : false , "message": "username duplicate "}) }
 
