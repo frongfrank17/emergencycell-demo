@@ -13,7 +13,7 @@ module.exports = {
                     "username" : req.body.username , "password" : req.body.password ,   
                     "email":req.body.email , "fullname":req.body.fullname      
                     }
-                    if(!result == undefined || !result == null ){
+                    if(result == undefined || !result == null ){
                         config.insert(register, (result ,err ) => {
                             if(err) throw err 
                             res.status(200).json({"status":true,"message": "complete" , "username": result.username})
