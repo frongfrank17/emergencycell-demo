@@ -4,15 +4,17 @@ const router = express.Router();
 // model Stion service 
 const MODEL_Station_Register = require('../Models/station_register')
 const MODEL_Station_Login = require('../Models/Station_login')
-//const MODEL_Station_Edit = require()
-//const MODEL_Station_remove = require()
+const  Auth = require('../Models/authencation')
+
 //rounter path 
 router.post("/staff/register" , MODEL_Station_Register.register)
 // POST : api/station/manager/v1/staff/register  
 router.post("/staff/login" , MODEL_Station_Login.managerLogin)
-// POST : api/station/manager/v1/staff/login
-//router.post("/staff/profile/edit" , MODEL_Station_Edit)
-// POST  : api/station/manager/v1/staff/profile/edit
-//router.delete("/staff/admin/remove" , MODEL_Station_remove)
-// delete : api/station/manager/v1/staff/admin/remove
+
+router.get('/authen' , Auth.Auth , (req ,res) => {
+    res.json({
+        success: true,
+        message: 'hello word',
+      });
+} )
 module.exports = router
