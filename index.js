@@ -24,6 +24,16 @@ const StationController = require('./Controller/StationService.Controller')
 app.use('/api/station/manager/v1' ,StationController)
 require("./Emergency.socket")
 
+app.use((req, res, next) => {
+  let ALLOW_ORIGIN = ['htpp://localhost:3000']
+  let ORIGIN = req.headers.origin
+     if (ALLOW_ORIGIN.includes(ORIGIN)) {
+       res.header('Access-Control-Allow-Origin', ORIGIN)
+     }
+     res.header('Access-Control-Allow-Methods','POST, GET, PUT, PATCH, DELETE, OPTIONS')
+     res.header('Access-Control-Allow-Headers','Content-Type, Option, Authorization')
+     return next()
+  })
 
 app.use((req, res, next) => {
   

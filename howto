@@ -1,5 +1,6 @@
 heroku login
-heroke create emergencycell-demo
+heroku create emergencycell-demo
 git add . 
 git commit -m " txt "
 git push heroku master
+heroku logs
