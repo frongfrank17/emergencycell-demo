@@ -23,7 +23,7 @@ app.use('/api/emergency/v1' , EmergencycellComntroller)
 const StationController = require('./Controller/StationService.Controller')
 app.use('/api/station/manager/v1' ,StationController)
 require("./Emergency.socket")
-
+/*
 app.use((req, res, next) => {
  
      res.header('Access-Control-Allow-Origin', '*')
@@ -31,7 +31,7 @@ app.use((req, res, next) => {
      res.header('Access-Control-Allow-Headers','Content-Type, Option, Authorization')
      return next()
   })
-
+*/
 app.use((req, res, next) => {
   
     const err = new Error('Not found');
