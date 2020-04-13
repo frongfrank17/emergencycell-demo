@@ -15,7 +15,7 @@ module.exports = {
         try {
             let login = { 'username' : req.body.username , 'password' : req.body.password}
             db.get("dbManager_station").findOne(login, (err , result) => {
-               if(result.username) {
+               if(result) {
                // if(username === mockedUsername && password === mockedPassword){
                    let token = jwt.sign({username:result.username} , config_secret , {expiresIn:'24h'})
                    // let token = jwt.sign({username:username} , config_secret , {expiresIn:'24h'})
