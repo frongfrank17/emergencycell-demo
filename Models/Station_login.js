@@ -7,11 +7,7 @@ const config_secret = config.secret
 module.exports = {
     // POST : api/emergency/station/staff/:id usercell
     managerLogin : (req , res  , next ) => {
-      /*  let username = req.body.username;
-        let password = req.body.password;
-        // For the given username fetch user from DB
-        let mockedUsername = 'admin';
-        let mockedPassword = 'password';*/
+
         try {
             let login = { 'username' : req.body.username , 'password' : req.body.password}
             db.get("dbManager_station").findOne(login, (err , result) => {
