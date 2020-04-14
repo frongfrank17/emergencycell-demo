@@ -1,13 +1,24 @@
-const monk = require('monk')
-const config = require('./index')
-const IO = config.ws
 
-IO.on('connection' , (socket) => {
-    console.log("connected client >> " , socket.id)
+const config = require('./config')
+const websocket = require('./index').ws
+const IO = websocket
+const db = config.db_production
+
+IO.on('connection', client => {
+    console.log("connected client >> " , client.id)
       setInterval( () => {
 
-        
+          try {
 
-      })
-    IO.on("disconnect" , (msg) => console.log("disconnect client" , msg))
+            db.get("dbEmergency").find({ }, (err , result) => {
+                 // console.log(result)
+                  IO.emit('emergency-cell-lists' , JSON.stringify(result))
+                  IO.emit('emergency-cell-count', JSON.stringify(result.count))
+            } )
+            
+        } catch(error) { console.log(error) }
+
+      } , 15000)
+
+    
 })
