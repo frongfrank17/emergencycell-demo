@@ -26,7 +26,7 @@ ex
                 "connect_type2" : "Type C" 
 
         }
-POST : http://localhost:8080/api/emergency/v1/station/staff/update updata status 
+POST : https://emergencycell-demo.herokuapp.com/api/emergency/v1/station/staff/update updata status 
 body {
  id : (_id)
 }
