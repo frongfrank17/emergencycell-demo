@@ -4,3 +4,4 @@ git add .
 git commit -m " txt "
 git push heroku master
 heroku logs
+heroku restart

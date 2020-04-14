@@ -12,8 +12,8 @@ IO.on('connection', client => {
 
             db.get("dbEmergency").find({ }, (err , result) => {
                  // console.log(result)
-                  IO.emit('emergency-cell-lists' , JSON.stringify(result))
-                  IO.emit('emergency-cell-count', JSON.stringify(result.count))
+                 IO.emit("emergency-cell-lists" , JSON.stringify(result) )
+                 IO.emit("emergency-count" , result.length)
             } )
             
         } catch(error) { console.log(error) }
