@@ -10,8 +10,7 @@ IO.on('connection', client => {
 
           try {
 
-            db.get("dbEmergency").find({ }, (err , result) => {
-                 // console.log(result)
+            db.get("dbEmergency").find({}, (err , result) => {
                  IO.emit("emergency-cell-lists" , JSON.stringify(result) )
                  IO.emit("emergency-count" , result.length)
             } )
