@@ -21,7 +21,7 @@ app.use(cors())
 const EmergencycellComntroller = require('./Controller/Emergencycell.Controller')
 app.use('/api/emergency/v1' , EmergencycellComntroller)
 const StationController = require('./Controller/StationService.Controller')
-app.use('/api/station/manager/v1' ,StationController)
+app.use('/api/station/manager/v1' , StationController)
 require("./Emergency.socket")
 
 /*
