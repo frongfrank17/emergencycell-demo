@@ -3,8 +3,8 @@
 on('emergency-cell-lists') 
 on('emergency-cel-count') 
 
-GET : https://emergencycell-demo.herokuapp.com/api/emergency/v1/station/staff/getCells view data all
-POST : https://emergencycell-demo.herokuapp.com/api/emergency/v1/user/cell  insert data
+GET : https://emergencycell-demo.herokuapp.com/api/emergency/v1/station/staff/getCells view data all -----------------------------------
+POST : https://emergencycell-demo.herokuapp.com/api/emergency/v1/user/cell  insert data              
 ex 
  {
        
